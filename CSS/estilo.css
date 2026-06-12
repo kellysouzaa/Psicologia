@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+ html {
+
+   		scroll-behavior: smooth; /*CHAMA A PAGINA SUAVEMENTE*/
+    	scroll-padding-top: 80px; /*TOPO 50px SERA CARREGADO QUANDO ROLAR A PAGINA
+        CLICAR NA ANCORA*/
+		
+	}
+    
+
+
+.WRAPPER{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+   
+
+.LOGO{
+   width: 8%;
+   height: 60px;
+   padding-left: 1%;
+    
+   
+
+}
+.tamanhologo{
+    width: 40%;
+}
+
+.TOPO{
+    padding: 0%;
+    width: 90%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /*opacidade 0.5*/
+    border-radius: 20px;
+    font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("../IMAGENS/FUNDO.avif"); 
+ }
+
+
+section{
+    width: 100%;
+    min-height: 100vh; /*viewport heigh* - altura responsiva para completar toda a tela*/
+  
+   
+}
+
+#COMECO{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(255, 255, 255);
+}
+#MEIO{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(255, 255, 255);
+}
+#FIM{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+/*ESTILO MENU */
+
+*{ /*aplique as regras abaixo a tudo*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/*CRIEI UMA CLASSE PARA O MENU*/
+.menu{
+    display:flex;
+    justify-content:space-between;
+    justify-content: center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    height: auto;
+    padding:15px 8%;
+    position:sticky; /*faz um elemento ficar "grudado" na tela quando o usuário rola a página.*/
+    top:0;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+
+
+.menu ul{
+    
+    display:flex;
+    justify-content: center;
+    list-style:none;
+    gap:30px; /*gap = intervalo ou espaçamento entre os botoes*/
+}
+
+.menu a{
+    
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    position:relative; /*serve para criar um ponto de referência para elementos posicionados dentro dele*/
+    /*Sem o position: relative no link (a), a linha animada (::after) não saberia onde se posicionar e poderia aparecer em lugares estranhos da página.*/
+    padding:5px 0;
+    transition:.3s;
+}
+
+.menu a::after{ /*cria um elemento virtual*/
+    content:""; /*para criar um elemento virtual é necessário ter uma propriedade ainda que vazia*/
+    position:absolute; /*Posiciona dentro do link sem afetar o texto. Aqui o link vira a referencia principal.*/
+    left:0;
+    bottom:-5px; /*para ficar logo abaixo do botao*/
+    width:0;
+    height:3px; /*largura do traço*/
+    background:#38bdf8;
+    transition:.4s;
+    border-radius:10px;
+}
+
+.menu a:hover{
+    color:#38bdf8;
+}
+
+.menu a:hover::after{
+    width:100%; /*largura do traço ao passar o mouse*/
+}
+
+/* Responsivo */
+@media(max-width:768px){
+
+    .menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu ul{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+}
+    
+
+
+
+
+
+
+/*MENU FIXO para o logo*/
+
+ .menu-fixo {
+            
+          
+            position: sticky;
+            /*sticky faz com que um elemento fique fixo em uma posição na tela enquanto você rola a página*/
+            top: 0px; /*para ele ficar no topo*/
+
+            z-index: 1000; /*empilhamento. COloquei um número alto para garantir que ficará acima de todos*/
+            text-align: center;
+            padding: 10px 0; /*margens em cima e embaixo de 10px e zero nas laterais*/
+        }
+
+	   .menu-fixo nav a {
+            margin: 0 15px; /*margens em cima e embaixo de 0px e 15 nas laterais*/
+            text-decoration: none;
+            color: #ffffff;
+           
+           
+        }
+
+
+
+/*CSS DA PAGINA INICIO*/
+
+        .boxcard{
+            width: 20%;
+            height: 640px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            margin: 1%;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* deslocamento horizontal, vertical, desfoque, cor */
+            padding: 1%;
+            }
+
+            .cuidar{/*css para o texto da primeira pagina abaixo dos cards*/
+                font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 2%;
+                font-size: 1.8em;
+
+            }
+        
+        p{
+            padding-top: 1%;
+            font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+
+        }    
+        h1{
+            text-align: center;
+            color:#363142;
+            font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2vw;
+         }
+        .tamanhoimg{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .zoom {
+            transition: transform 0.3s ease; 
+}
+
+        .zoom:hover {
+             transform: scale(1.1); 
+}
+
+/*CSS PAGINA QUEM SOMOS*/
+
+.boxfoto{
+    width: 40%;
+    padding: 1%;
+
+}
+    
+.boxtexto{
+    width: 48%;
+    padding: 2%;
+    letter-spacing: 10%;
+    
+    text-align: justify;
+
+}
+.tamanhofotopsiq{
+    width: 90%;
+}
+
+/*CSS PAGINA CONTATO*/
+
+.boxformulario{ /*caixa que receberá o formulário*/
+  width: 100%;
+  
+}
+
+/*FORMULARIO*/
+
+/*borda apenas abaixo da caixa de texto*/
+  input{ /*caixa para digitação*/
+  border: none; /*retirei as bordas da caixa de texto*/
+  border-bottom: 2px solid #535252; /*bottom = abaixo 
+   coloquei borda somente embaixo*/
+  border-radius: 10px; /*arredondando*/
+  outline: none; /*sem linhas externas ao clicar*/
+  padding: 8px 5px;
+  width:80%;
+  font-size: 1em; /*fonte responsiva*/
+  text-align: justify;
+  background-color: rgb(242, 238, 238);
+
+} 
+textarea{
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #535252;
+  outline: none;
+  padding: 8px 5px;
+  width: 80%;
+  font-size: 16px;
+  background-color: rgb(242, 238, 238);
+  
+
+}
+
+form{
+    margin: auto;
+    background-color: rgb(242, 238, 238);
+    width: 50%;
+    border-radius: 30px;
+    padding: 30px 0px 30px 30px;
+    opacity: 0.5;
+}
+
+
+.botaoFormulario{ /*criei uma classe p mudar algumas propriedades*/
+    background-color: #39393e;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 25%;
+    text-align: center;
+}
+
+

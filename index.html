@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Responsivo</title>
+
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html{ 
+    scroll-behavior:smooth;
+    scroll-padding: 50px;
+ }
+
+.WRAPPER{
+ width:100%;
+background-image: url('IMAGENS/FUNDO.PNG');
+}
+
+/* HEADER (LOGO + MENU LADO A LADO) */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 5%;
+  background:#3b1e30;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-radius: 30px;
+}
+
+.tamanhologo{
+  width:50px;
+  max-width:50%;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* MENU ESTILO ORIGINAL COM EFEITO */
+.menu ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  position:relative;
+  padding:5px 0;
+  transition:.3s;
+}
+
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:3px;
+  background:#be798f;
+  transition:.4s;
+  border-radius:10px;
+}
+
+.menu a:hover{ color:#be798f; }
+.menu a:hover::after{ width:100%; }
+
+section{
+  width:100%;
+  padding:40px 20px;
+}
+
+/* CARDS */
+#COMECO{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  background-color: rgb(148, 174, 181);
+  background-image: url('IMAGENS/FUNDO.PNG');
+  
+  
+}
+
+.boxcard{
+  width:22%;
+  min-width:260px;
+  background:#fff;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.tamanhoimg{
+  width:100%;
+  height:auto;
+  border-radius:15px;
+}
+
+h1{
+  font-size:1.5rem;
+  margin-top:10px;
+  font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 1%;
+  text-align: center;
+  color: #39393e;
+}
+
+p{ font-size:0.90rem;
+   font-family: Century Gothic, Verdana, Geneva, Tahoma, sans-serif;
+   letter-spacing: 5%;
+   line-height: 150%;
+ }
+
+
+
+
+
+/* SOBRE */
+#MEIO{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  background-color: #fff;
+ 
+ 
+}
+
+
+.boxfoto{ width:40%; min-width:280px; }
+.boxtexto{ width:50%; min-width:280px; }
+.tamanhofotopsiq{ width:100%; }
+
+/* FORM */
+form{
+  width:50%;
+  min-width:280px;
+  margin:auto;
+  background-color: #fff;
+  padding:50px;
+  border-radius:20px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+ 
+  
+  
+  
+}
+
+input, textarea{
+  width:100%;
+  margin-bottom:10px;
+  padding:10px;
+  border:none;
+  border-bottom:2px solid #888;
+  border-radius:8px;
+  background-color: rgb(235, 239, 239);
+  color: #7c7c7c;
+  
+}
+::placeholder{
+  color: #7c7c7c;
+}
+
+.botaoFormulario{
+  background:#3b1e30;
+  color:white;
+  width:100%;
+  padding:10px;
+  border:none;
+}
+
+
+.zoom {
+  transition: transform 0.3s ease; /* Suaviza o efeito */
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* Aumenta 20% */
+}
+
+.cor{
+  color: #5b4149; /*cor da mensagem acima do formulario*/
+  font-size:1.9rem;
+  font-family:Century Gothic,Tempus Sans ITC,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+
+  .header{
+    flex-direction:column;
+    gap:30px;
+  }
+
+  .menu ul{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .boxcard{ width:90%; }
+
+  #MEIO{ flex-direction:column; }
+
+  .boxfoto, .boxtexto{ width:100%; }
+
+  form{ width:90%; }
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="WRAPPER">
+
+<div class="header">
+ 
+  <img src="IMAGENS/logo.png" class="tamanhologo">
+
+  <div class="menu">
+    <ul>
+      <li><a href="#COMECO">HOME</a></li>
+      <li><a href="#MEIO">SOBRE MIM</a></li>
+      <li><a href="#FIM">CONTATO</a></li>
+    </ul>
+  </div>
+</div>
+
+<section id="COMECO">
+
+<div class="boxcard zoom">
+  <img src="IMAGENS/PANICO.jpg" class="tamanhoimg">
+  <h1>Crise de Pânico</h1>
+  <p>Uma sensação intensa de medo que surge de repente, com sintomas físicos e emocionais. Com apoio adequado, é possível compreender e retomar o controle</p>
+</div>
+
+<div class="boxcard zoom">
+  <img src="IMAGENS/depressaoNovo.jpg" class="tamanhoimg">
+  <h1>Depressão</h1>
+  <p>Mais do que tristeza, é um cansaço emocional profundo. Com acolhimento e apoio, é possível reencontrar sentido e leveza</p>
+</div>
+
+<div class="boxcard zoom">
+  <img src="IMAGENS/ansiedade (3).jpg" class="tamanhoimg">
+  <h1>Ansiedade</h1>
+  <p>Uma inquietação constante que pode causar preocupação excessiva e tensão. Com apoio adequado, é possível encontrar calma e equilíbrio</p>
+</div>
+
+ <div class="boxcard zoom">
+               
+  <img src="IMAGENS/AUTODES.jpg"  class="tamanhoimg" alt="">
+   <h1>Relacionamentos</h1>
+   <p> Conflitos, inseguranças e dificuldades na comunicação são mais comuns do que parecem, mas não precisam ser permanentes. Na terapia, você encontra um espaço seguro para compreender suas emoções </p>
+</div>
+
+</section>
+
+<section id="MEIO">
+<div class="boxfoto">
+<img src="IMAGENS/FOTOCATIA.png" class="tamanhofotopsiq">
+</div>
+
+<div class="boxtexto">
+<h1>Cátia Pereira de Souza</h1>
+<p>Cuidar da saúde emocional é um passo essencial para uma vida mais leve, consciente e equilibrada. Nosso trabalho nasce do compromisso em oferecer um espaço acolhedor, ético e seguro, onde cada pessoa possa se sentir ouvida, respeitada e compreendida em sua singularidade.
+</p>
+<p>
+Sou psicóloga formada em Psicologia, com atuação voltada ao cuidado da saúde mental feminina. Minha prática é fundamentada em Terapia Cognitivo-Comportamental (TCC), Psicanálise, Humanista, etc.], sempre baseada em técnicas reconhecidas cientificamente e no respeito às necessidades individuais de cada paciente.
+</p>
+<p>
+Ao longo da minha trajetória, venho me dedicando ao aprofundamento constante por meio de cursos, especializações e estudos na área da ansiedade, autoestima, relacionamentos e desenvolvimento emocional, buscando oferecer um atendimento atualizado, sensível e eficaz. Acredito que cada história é única, e por isso meu trabalho é guiado por uma escuta empática e pela construção conjunta de caminhos para o bem-estar. Meu objetivo é ajudar você a se reconectar consigo mesma, fortalecer sua autoestima e desenvolver recursos internos para lidar com as adversidades da vida com mais clareza e equilíbrio. Seja bem-vinda. Aqui, você não precisa dar conta de tudo sozinha.
+
+</p>
+</div>
+</section>
+
+<section id="FIM">
+
+
+<form method="post" id="FContato" action="mailto:empresaX@gmail.com">
+   <h1 class="cor">Você não está sozinha!</h1>
+  <br>
+  <input type="text" placeholder="Nome" required>
+  <input type="text" placeholder="Endereço" required>
+  <input type="tel" placeholder="Telefone" required>
+  <input type="email" placeholder="Email" required>
+  <input type="date" placeholder="Data" required>
+  <textarea placeholder="Mensagem"></textarea>
+  <button class="botaoFormulario">Enviar</button>
+</form>
+
+</section>
+
+
+<!-- WHATSAPP FLUTUANDO-->
+
+<a href="https://api.whatsapp.com/send?phone=5511978019100&text=Quero%20fazer%20um%20orçamento"
+target="_blank"
+style="position:fixed;bottom:20px;right:30px;">
+<svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#4CAF50"/><path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/></svg>
+</a>
+
+</div>
+
+</body>
+</html>
