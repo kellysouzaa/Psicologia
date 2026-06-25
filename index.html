@@ -15,6 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -66,7 +69,7 @@ background:#f3f3f3;
 section{
     width: 100%;
     min-height: 100vh;
-     padding:40px 20px;
+    padding:40px 20px;
 }
 
 
@@ -75,7 +78,7 @@ section{
   display:flex;
   gap:30px;
   list-style:none;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', 'Playfair Display', serif;
 }
  
 
@@ -125,9 +128,13 @@ section{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
+  gap:0px;
  
   
+  
+}
+.essencia{
+  font-family: 'Montserrat', 'Playfair Display', serif;
   
 }
 
@@ -159,7 +166,7 @@ h1{
 h2{
   font-size:1.5rem;
   margin-top:10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', 'Playfair Display', serif;
   padding-bottom: 1%;
   text-align: center;
   color: #000000;
@@ -167,17 +174,14 @@ h2{
   padding-bottom: 50px;
 }
 p{ font-size:0.90rem;
-   font-family: 'Playfair Display', serif;
+   font-family: 'Poppins', sans-serif;
    letter-spacing: 5%;
    line-height: 150%;
    text-align: center;
    padding-bottom: 1%;
  }
  
- .pjustificado{
-  text-align: justify;
-  font-family: 'Playfair Display', serif;
- }
+
 
 
 /* SOBRE */
@@ -192,9 +196,6 @@ p{ font-size:0.90rem;
  
 }
 
-
- 
-
 .boxfoto{ width:40%; min-width:280px; }
 .boxtexto{ width:50%; min-width:280px; }
 .tamanhofotopsiq{ width:100%; }
@@ -207,7 +208,7 @@ form{
   background-color: rgb(231, 236, 238);
   padding:80px;
   border-radius:20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   
   
 
@@ -222,7 +223,7 @@ input, textarea{
   border-radius:8px;
   background-color: rgb(235, 239, 239);
   color: #000000;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   
 }
 ::placeholder{
@@ -232,9 +233,10 @@ input, textarea{
 .botaoFormulario{
   background:#0997b1;
   color:white;
-  width:20%;
+  width:30%;
   padding:10px;
   border:none;
+  border-radius: 20px;
 }
 
 
@@ -249,7 +251,7 @@ input, textarea{
 .hamburger {
   display: none;
   font-size: 30px;
-  font-family: 'Playfair Display', serif;
+ font-family: 'Poppins', sans-serif;
   color: rgb(255, 255, 255);
   cursor: pointer;
  
@@ -294,10 +296,10 @@ input, textarea{
          /*formatando o texto sobre o banner */
         font-size: 2.8em;
         color: rgb(26, 25, 25);  
-        padding-top: 250px; 
-               
-        text-align: right;        /* Centralizar texto */
-        font-family: 'Playfair Display', serif;
+        padding-top: 220px;
+                   
+        text-align: center;        /* Centralizar texto */
+        font-family: 'Poppins', sans-serif;
  
         
           
@@ -313,10 +315,10 @@ input, textarea{
 
 .titulobanner{
   font-size: 1.2em;
-   font-family: 'Playfair Display', serif;
+  font-family: Arial Black, Helvetica, sans-serif, serif;
   color: #f3f3f3;
   text-align: left;
-  padding-left:100px;
+  padding-left:0px;
 
 }    
 
@@ -431,12 +433,16 @@ input, textarea{
 
 .titulobanner{
   font-size: 0.8em;
-    font-family: 'Playfair Display', serif;
+  font-family: Arial Black, Helvetica, sans-serif, serif;
   color: #f3f3f3;
   text-align:center;
   padding-left: 0px;
 
 }  
+.essencia{
+  font-family: 'Playfair Display', serif;
+}
+
 }
 /*TERMINA AQUI*/
 
@@ -485,7 +491,10 @@ input, textarea{
 <section id="COMECO">
 
 <div class="boxBannerRotativo">
-  <p class="titulobanner"> Espaço seguro para  se reconectar <br>com sua essência </p>
+  <p class="titulobanner"> UM ESPAÇO SEGURO <br>
+    <span class="essencia">para ser você!</span> </p>
+
+    
 </div>
 
  <div class="botaoconsulta">
@@ -522,6 +531,7 @@ input, textarea{
    <p> Conflitos, inseguranças e dificuldades na comunicação são mais comuns do que parecem, mas não precisam ser permanentes. Na terapia, você encontra um espaço seguro para compreender suas emoções </p>
 </div>
 
+
 </section>
 
 <section id="MEIO">
@@ -530,19 +540,28 @@ input, textarea{
 </div>
 
 <div class="boxtexto">
-<h1>Cátia Pereira de Souza</h1>
+<h1>CÁTIA PEREIRA DE SOUZA</h1>
 <h2>Psicóloga e neuropsicóloga</h2>
 
 
-<p class="pjustificado">Cuidar da saúde emocional é um passo essencial para uma vida mais leve, consciente e equilibrada. Nosso trabalho nasce do compromisso em oferecer um espaço acolhedor, ético e seguro, onde cada pessoa possa se sentir ouvida, respeitada e compreendida em sua singularidade.
-</p>
-<p class="pjustificado">
 Sou psicóloga formada em Psicologia, com atuação voltada ao cuidado da saúde mental feminina. Minha prática é fundamentada em Terapia Cognitivo-Comportamental (TCC), Psicanálise, Humanista, etc.], sempre baseada em técnicas reconhecidas cientificamente e no respeito às necessidades individuais de cada paciente.
-</p>
-<p class="pjustificado">
-Ao longo da minha trajetória, venho me dedicando ao aprofundamento constante por meio de cursos, especializações e estudos na área da ansiedade, autoestima, relacionamentos e desenvolvimento emocional, buscando oferecer um atendimento atualizado, sensível e eficaz. Acredito que cada história é única, e por isso meu trabalho é guiado por uma escuta empática e pela construção conjunta de caminhos para o bem-estar. Meu objetivo é ajudar você a se reconectar consigo mesma, fortalecer sua autoestima e desenvolver recursos internos para lidar com as adversidades da vida com mais clareza e equilíbrio. Seja bem-vinda. Aqui, você não precisa dar conta de tudo sozinha.
 
-</p>
+
+
+Cuidar da saúde emocional é um passo essencial para uma vida mais leve, consciente e equilibrada. Meu trabalho nasce do compromisso em oferecer um espaço acolhedor, ético e seguro, onde cada pessoa possa se sentir ouvida, respeitada e compreendida em sua singularidade.
+
+
+Busco constante aperfeiçoamento por meio de cursos, supervisão clínica e participação em eventos da área, garantindo um atendimento sempre atualizado e de qualidade.
+Atuo no acompanhamento de questões como ansiedade, inseguranças, conflitos emocionais e desafios do cotidiano, auxiliando no processo de autoconhecimento e na construção de uma vida com mais equilíbrio e sentido.
+
+
+
+
+
+
+
+
+
 </div>
 </section>
 
